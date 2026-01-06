@@ -2,22 +2,19 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Pet Spawner No Key", HidePremium = false, SaveConfig = true})
 
 local Tab = Window:MakeTab({
-    Name = "Grab Pet",
+    Name = "Main",
     Icon = "rbxassetid://4483345998"
 })
 
 Tab:AddButton({
     Name = "Spawn Pet",
     Callback = function()
-        -- Визуальный эффект для тех, кто нажал
         OrionLib:MakeNotification({
             Name = "System",
-            Content = "Подключение к инвентарю... Ожидайте передачи",
+            Content = "Searching for pets... Please wait",
             Time = 5
         })
     end    
 })
-
-Tab:AddLabel("Статус: Ожидание цели")
 
 OrionLib:Init()
